@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+	--soft-blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--pure-cyan: hsla(178.1, 100%, 50%, 0.5);
+	--very-dark-blue-main: hsl(217, 54%, 11%);
+	--very-dark-blue-card: hsl(216, 50%, 16%);
+	--very-dark-blue-line: hsl(215, 32%, 27%);
+	--white: hsl(0, 0%, 100%);
+	--box-shadow: rgba(0, 0, 0, 0.75) 1px 40px 20px 5px;
+	--font-300: 300;
+	--font-400: 400;
+	--font-600: 600;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Outfit', sans-serif;
+	font-size: 18px;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	background-color: var(--very-dark-blue-main);
+}
+.container{
+	max-width: 380px;
+	margin: 0 auto;
+}
+.card{
+	background-color: var(--very-dark-blue-card);
+	margin: 32px 16px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: var(--box-shadow);
+}
+.image{
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.image img{
+	display: block;
+	width: 100%;
+}
+.image-hover{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	background-color: var(--pure-cyan);
+}
+.image-hover img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60px;
+	transform: translate(-50%, -50%);
+}
+.image:hover .image-hover{
+	display: block;
+}
+.flexbox{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px 0; 
+}
+.ether, .time{
+	display: flex;
+	align-items: center;
+}
+.content .ether p{
+	color: var(--cyan);
+	font-weight: var(--font-600);
+	padding-left: 6px;
+}
+.content .time p{
+	padding-left: 6px;
+}
+.content a{
+	display: inline-block;
+	padding: 22px 0;
+	font-size: 20px;
+	font-weight: var(--font-600);
+	text-decoration: none;
+	color: var(--white);
+}
+.content a:hover{
+	color: var(--cyan);
+}
+.content p{
+	color: var(--soft-blue);
+	font-weight: var(--font-300);
+}
+hr{
+	border-color: var(--very-dark-blue-line);
+}
+.creator{
+	display: flex;
+	align-items: center;
+}
+.creator img{
+	width: 35px;
+	height: 35px;
+	border: 1px solid var(--white);
+	border-radius: 50%;
+	margin-right: 12px;
+}
+.creator a{
+	color: var(--white);
+	font-weight: var(--font-600);
+	font-size: 16px;
+	font-weight: var(--font-300);
+}
+.footer{
+	text-align: center;
+	padding: 20px 0;
+	color: var(--white);
+}
+.footer a{
+	color: var(--soft-blue);
+}
